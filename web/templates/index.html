@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Cursor Helper - Web Interface</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <h1>Cursor Helper</h1>
+                        <span class="version">Web UI v1.0</span>
+                    </div>
+                    <div class="system-status">
+                        <div class="status-item">
+                            <i class="fas fa-desktop"></i>
+                            <span id="os-info">Loading...</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-user"></i>
+                            <span id="user-info">Loading...</span>
+                        </div>
+                        <div class="status-item">
+                            <i class="fas fa-shield-alt" id="admin-icon"></i>
+                            <span id="admin-status">Checking...</span>
+                        </div>
+                        <a href="/help" class="status-item" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help & Docs</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Status Cards -->
+                <div class="status-grid">
+                    <div class="status-card cursor-status">
+                        <div class="card-header">
+                            <h3><i class="fas fa-code"></i>Cursor Status</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="status-indicator" id="cursor-indicator">
+                                <span class="status-dot"></span>
+                                <span id="cursor-status-text">Checking...</span>
+                            </div>
+                            <button id="kill-cursor-btn" class="btn btn-danger" disabled>
+                                <i class="fas fa-times"></i>
+                                Close Cursor
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="status-card config-status">
+                        <div class="card-header">
+                            <h3><i class="fas fa-cog"></i>Configuration</h3>
+                        </div>
+                        <div class="card-content">
+                            <div class="config-path">
+                                <label>Config Path:</label>
+                                <span id="config-path">Loading...</span>
+                            </div>
+                            <div class="config-actions">
+                                <button id="refresh-config-btn" class="btn btn-secondary">
+                                    <i class="fas fa-sync"></i>
+                                    Refresh
+                                </button>
+                                <button id="generate-preview-btn" class="btn btn-info">
+                                    <i class="fas fa-eye"></i>
+                                    Preview New IDs
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Actions -->
+                <div class="action-section">
+                    <div class="action-card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-magic"></i>Reset Cursor Trial</h2>
+                        </div>
+                        <div class="card-content">
+                            <p class="description">
+                                This will generate new machine identifiers and reset your Cursor trial status.
+                                Make sure Cursor is closed before proceeding.
+                            </p>
+                            
+                            <div class="options">
+                                <label class="checkbox-wrapper">
+                                    <input type="checkbox" id="readonly-option">
+                                    <span class="checkmark"></span>
+                                    Set storage.json to read-only mode
+                                    <small>This prevents Cursor from modifying the configuration file</small>
+                                </label>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button id="reset-btn" class="btn btn-primary btn-large">
+                                    <i class="fas fa-refresh"></i>
+                                    Reset Cursor Trial
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="action-card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-shield-alt"></i>Disable Auto-Update</h2>
+                        </div>
+                        <div class="card-content">
+                            <p class="description">
+                                Prevents Cursor from automatically updating to potentially unsupported versions.
+                                This is useful to maintain compatibility with the reset tool.
+                            </p>
+                            
+                            <div class="warning-notice">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <p><strong>Note:</strong> After disabling auto-updates, you'll need to manually download and install new versions. Only update after confirming compatibility.</p>
+                            </div>
+
+                            <div class="action-buttons">
+                                <button id="disable-autoupdate-btn" class="btn btn-warning btn-large">
+                                    <i class="fas fa-ban"></i>
+                                    Disable Auto-Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configuration Details -->
+                <div class="config-section">
+                    <div class="config-card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-list"></i>Current Configuration</h2>
+                            <button id="toggle-config-btn" class="btn btn-small">
+                                <i class="fas fa-chevron-down"></i>
+                                Show Details
+                            </button>
+                        </div>
+                        <div class="card-content config-details" id="config-details" style="display: none;">
+                            <div class="config-grid">
+                                <div class="config-item">
+                                    <label>Machine ID:</label>
+                                    <span id="machine-id" class="config-value">Not loaded</span>
+                                    <button class="copy-btn" data-copy="machine-id">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="config-item">
+                                    <label>MAC Machine ID:</label>
+                                    <span id="mac-machine-id" class="config-value">Not loaded</span>
+                                    <button class="copy-btn" data-copy="mac-machine-id">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="config-item">
+                                    <label>Device ID:</label>
+                                    <span id="device-id" class="config-value">Not loaded</span>
+                                    <button class="copy-btn" data-copy="device-id">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="config-item">
+                                    <label>SQM ID:</label>
+                                    <span id="sqm-id" class="config-value">Not loaded</span>
+                                    <button class="copy-btn" data-copy="sqm-id">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="config-item">
+                                    <label>Last Modified:</label>
+                                    <span id="last-modified" class="config-value">Not loaded</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logs Section -->
+                <div class="logs-section">
+                    <div class="logs-card">
+                        <div class="card-header">
+                            <h2><i class="fas fa-terminal"></i>Activity Log</h2>
+                            <button id="clear-logs-btn" class="btn btn-small btn-secondary">
+                                <i class="fas fa-trash"></i>
+                                Clear
+                            </button>
+                        </div>
+                        <div class="card-content">
+                            <div id="logs-container" class="logs-container">
+                                <div class="log-entry info">
+                                    <span class="log-time">[Loading]</span>
+                                    <span class="log-message">Initializing web interface...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; 2024 Cursor Helper - Educational Tool</p>
+                        <p>For study and educational purposes only</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="https://github.com/yuaotian/go-cursor-help" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p id="loading-message">Processing...</p>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success">
+            <div class="modal-header">
+                <i class="fas fa-check-circle"></i>
+                <h3>Success!</h3>
+            </div>
+            <div class="modal-body">
+                <p id="success-message">Operation completed successfully!</p>
+                <div class="restart-notice">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Please restart Cursor manually for changes to take effect.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="success-ok-btn" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="modal">
+        <div class="modal-content error">
+            <div class="modal-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Error</h3>
+            </div>
+            <div class="modal-body">
+                <p id="error-message">An error occurred.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="error-ok-btn" class="btn btn-primary">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content preview">
+            <div class="modal-header">
+                <i class="fas fa-eye"></i>
+                <h3>Preview New Identifiers</h3>
+            </div>
+            <div class="modal-body">
+                <div class="preview-grid" id="preview-grid">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="preview-close-btn" class="btn btn-secondary">Close</button>
+                <button id="preview-regenerate-btn" class="btn btn-info">Regenerate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app_simple.js"></script>
+</body>
+</html>

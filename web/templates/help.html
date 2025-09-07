@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 Cursor Helper - How It Works</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/help.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <i class="fas fa-rocket"></i>
+                        <h1>Cursor Helper</h1>
+                        <span class="version">Documentation v1.0</span>
+                    </div>
+                    <div class="navigation">
+                        <a href="/" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <a href="/help" class="nav-link active">
+                            <i class="fas fa-book"></i>
+                            Documentation
+                        </a>
+                        <a href="https://github.com/yuaotian/go-cursor-help" target="_blank" class="nav-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-content">
+                        <h1><i class="fas fa-graduation-cap"></i>How Cursor Helper Works</h1>
+                        <p class="hero-description">
+                            A comprehensive guide to understanding and using the Cursor Helper tool for educational purposes.
+                            Learn how machine identifiers work and how this tool helps reset trial limitations.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Table of Contents -->
+                <section class="toc-section">
+                    <div class="toc-card">
+                        <h2><i class="fas fa-list"></i>Table of Contents</h2>
+                        <div class="toc-grid">
+                            <a href="#overview" class="toc-item">
+                                <i class="fas fa-eye"></i>
+                                <span>Project Overview</span>
+                            </a>
+                            <a href="#how-it-works" class="toc-item">
+                                <i class="fas fa-cogs"></i>
+                                <span>How It Works</span>
+                            </a>
+                            <a href="#identifiers" class="toc-item">
+                                <i class="fas fa-key"></i>
+                                <span>Machine Identifiers</span>
+                            </a>
+                            <a href="#process" class="toc-item">
+                                <i class="fas fa-tasks"></i>
+                                <span>Reset Process</span>
+                            </a>
+                            <a href="#safety" class="toc-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Safety Features</span>
+                            </a>
+                            <a href="#platforms" class="toc-item">
+                                <i class="fas fa-desktop"></i>
+                                <span>Platform Support</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Project Overview -->
+                <section id="overview" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-eye"></i>Project Overview</h2>
+                            <span class="section-badge educational">Educational Purpose</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="overview-grid">
+                                <div class="overview-item">
+                                    <div class="overview-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <h3>Educational Tool</h3>
+                                    <p>This project is designed for <strong>studying and educational purposes</strong> to understand how software licensing and machine identification systems work.</p>
+                                </div>
+                                
+                                <div class="overview-item">
+                                    <div class="overview-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <h3>Research Focus</h3>
+                                    <p>Helps developers understand trial limitation mechanisms and system identification techniques used by modern applications.</p>
+                                </div>
+                                
+                                <div class="overview-item">
+                                    <div class="overview-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h3>Technical Learning</h3>
+                                    <p>Demonstrates registry manipulation, configuration file handling, and cross-platform system programming concepts.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="warning-box">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div>
+                                    <h4>Important Notice</h4>
+                                    <p>This tool is created for educational and research purposes only. Please use responsibly and consider supporting software developers by purchasing legitimate licenses.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How It Works -->
+                <section id="how-it-works" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-cogs"></i>How It Works</h2>
+                            <span class="section-badge technical">Technical</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="workflow-container">
+                                <div class="workflow-step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h3>Problem Detection</h3>
+                                        <p>Cursor uses machine-specific identifiers to track trial usage. When you see errors like "Too many free trial accounts used on this machine", it means these identifiers are flagged.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h3>Identifier Analysis</h3>
+                                        <p>The tool identifies and backs up current machine identifiers including Windows MachineGuid, MAC addresses, and Cursor's telemetry IDs.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h3>Safe Modification</h3>
+                                        <p>New unique identifiers are generated and safely applied to the system, making the machine appear as a new device to Cursor's trial system.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="workflow-step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h3>Trial Reset</h3>
+                                        <p>With new identifiers in place, Cursor recognizes the machine as new, effectively resetting the trial period and removing usage limitations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Machine Identifiers -->
+                <section id="identifiers" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-key"></i>Machine Identifiers Explained</h2>
+                            <span class="section-badge technical">Deep Dive</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="identifiers-grid">
+                                <div class="identifier-card">
+                                    <div class="identifier-header">
+                                        <i class="fas fa-desktop"></i>
+                                        <h3>Windows MachineGuid</h3>
+                                    </div>
+                                    <div class="identifier-content">
+                                        <p><strong>Location:</strong> Registry HKLM\SOFTWARE\Microsoft\Cryptography</p>
+                                        <p><strong>Purpose:</strong> Unique system identifier assigned during Windows installation</p>
+                                        <p><strong>Modification:</strong> Requires administrator privileges</p>
+                                        <div class="identifier-example">
+                                            <span>Example:</span>
+                                            <code>12345678-1234-1234-1234-123456789ABC</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="identifier-card">
+                                    <div class="identifier-header">
+                                        <i class="fas fa-microchip"></i>
+                                        <h3>Telemetry Machine ID</h3>
+                                    </div>
+                                    <div class="identifier-content">
+                                        <p><strong>Location:</strong> Cursor's storage.json configuration file</p>
+                                        <p><strong>Purpose:</strong> Primary identifier used by Cursor for telemetry and licensing</p>
+                                        <p><strong>Format:</strong> Hexadecimal string generated by Cursor</p>
+                                        <div class="identifier-example">
+                                            <span>Example:</span>
+                                            <code>a1b2c3d4e5f6789012345678901234567890abcd</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="identifier-card">
+                                    <div class="identifier-header">
+                                        <i class="fas fa-network-wired"></i>
+                                        <h3>MAC Machine ID</h3>
+                                    </div>
+                                    <div class="identifier-content">
+                                        <p><strong>Source:</strong> Network adapter MAC address</p>
+                                        <p><strong>Purpose:</strong> Hardware-based identifier for additional verification</p>
+                                        <p><strong>Variability:</strong> Can change with network adapter changes</p>
+                                        <div class="identifier-example">
+                                            <span>Example:</span>
+                                            <code>00-11-22-33-44-55-66-77-88-99-AA-BB</code>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="identifier-card">
+                                    <div class="identifier-header">
+                                        <i class="fas fa-fingerprint"></i>
+                                        <h3>Device ID & SQM ID</h3>
+                                    </div>
+                                    <div class="identifier-content">
+                                        <p><strong>Device ID:</strong> UUID format identifier for device tracking</p>
+                                        <p><strong>SQM ID:</strong> Software Quality Metrics identifier</p>
+                                        <p><strong>Usage:</strong> Additional tracking and analytics purposes</p>
+                                        <div class="identifier-example">
+                                            <span>Device ID:</span>
+                                            <code>550e8400-e29b-41d4-a716-446655440000</code>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reset Process -->
+                <section id="process" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-tasks"></i>Reset Process Detailed</h2>
+                            <span class="section-badge process">Step-by-Step</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="process-timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h3>Prerequisites Check</h3>
+                                        <p>Verify administrator privileges and check if Cursor processes are running</p>
+                                        <ul>
+                                            <li>Administrator rights validation</li>
+                                            <li>Process detection and termination</li>
+                                            <li>Backup directory preparation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <i class="fas fa-save"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h3>Backup Creation</h3>
+                                        <p>Create secure backups of original identifiers for safety and recovery</p>
+                                        <ul>
+                                            <li>Registry values backup (Windows)</li>
+                                            <li>Configuration files backup</li>
+                                            <li>Timestamped backup files</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <i class="fas fa-random"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h3>ID Generation</h3>
+                                        <p>Generate new unique identifiers using cryptographically secure methods</p>
+                                        <ul>
+                                            <li>UUID v4 generation for Device IDs</li>
+                                            <li>Hexadecimal string generation for Machine IDs</li>
+                                            <li>Entropy-based randomization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <i class="fas fa-wrench"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h3>System Modification</h3>
+                                        <p>Apply new identifiers to system and application configuration</p>
+                                        <ul>
+                                            <li>Windows registry modification</li>
+                                            <li>Cursor configuration update</li>
+                                            <li>Permission adjustments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <i class="fas fa-shield-check"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h3>Verification</h3>
+                                        <p>Verify successful modification and prepare for application restart</p>
+                                        <ul>
+                                            <li>Configuration file validation</li>
+                                            <li>Registry entry verification</li>
+                                            <li>Restart instructions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Safety Features -->
+                <section id="safety" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-shield-alt"></i>Safety Features</h2>
+                            <span class="section-badge safety">Security</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="safety-grid">
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-history"></i>
+                                    </div>
+                                    <h3>Automatic Backups</h3>
+                                    <p>All original values are automatically backed up with timestamps before any modifications are made.</p>
+                                </div>
+                                
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <h3>Privilege Checking</h3>
+                                    <p>Verifies administrator privileges before attempting any system-level modifications.</p>
+                                </div>
+                                
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-stop-circle"></i>
+                                    </div>
+                                    <h3>Process Management</h3>
+                                    <p>Safely terminates Cursor processes before modifications to prevent data corruption.</p>
+                                </div>
+                                
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3>Error Handling</h3>
+                                    <p>Comprehensive error handling with detailed logging and recovery instructions.</p>
+                                </div>
+                                
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-undo"></i>
+                                    </div>
+                                    <h3>Rollback Support</h3>
+                                    <p>Backup files allow for manual rollback if needed (restore original identifiers).</p>
+                                </div>
+                                
+                                <div class="safety-feature">
+                                    <div class="feature-icon">
+                                        <i class="fas fa-file-contract"></i>
+                                    </div>
+                                    <h3>Read-Only Option</h3>
+                                    <p>Optional read-only mode for configuration files to prevent future modifications.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Platform Support -->
+                <section id="platforms" class="content-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-desktop"></i>Platform Support</h2>
+                            <span class="section-badge platforms">Cross-Platform</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="platforms-grid">
+                                <div class="platform-card windows">
+                                    <div class="platform-header">
+                                        <i class="fab fa-windows"></i>
+                                        <h3>Windows</h3>
+                                    </div>
+                                    <div class="platform-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Registry modification (MachineGuid)</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>PowerShell integration</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>UAC privilege elevation</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Auto-update disable</span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-location">
+                                        <strong>Config Path:</strong>
+                                        <code>%APPDATA%\Cursor\User\globalStorage\storage.json</code>
+                                    </div>
+                                </div>
+                                
+                                <div class="platform-card macos">
+                                    <div class="platform-header">
+                                        <i class="fab fa-apple"></i>
+                                        <h3>macOS</h3>
+                                    </div>
+                                    <div class="platform-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Configuration file modification</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>MAC address modification (optional)</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Sudo privilege support</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>App bundle modification</span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-location">
+                                        <strong>Config Path:</strong>
+                                        <code>~/Library/Application Support/Cursor/User/globalStorage/storage.json</code>
+                                    </div>
+                                </div>
+                                
+                                <div class="platform-card linux">
+                                    <div class="platform-header">
+                                        <i class="fab fa-linux"></i>
+                                        <h3>Linux</h3>
+                                    </div>
+                                    <div class="platform-features">
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Configuration file modification</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Bash script integration</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Sudo privilege support</span>
+                                        </div>
+                                        <div class="feature-item">
+                                            <i class="fas fa-check"></i>
+                                            <span>Flexible installation paths</span>
+                                        </div>
+                                    </div>
+                                    <div class="platform-location">
+                                        <strong>Config Path:</strong>
+                                        <code>~/.config/Cursor/User/globalStorage/storage.json</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional Resources -->
+                <section class="resources-section">
+                    <div class="section-card">
+                        <div class="section-header">
+                            <h2><i class="fas fa-external-link-alt"></i>Additional Resources</h2>
+                            <span class="section-badge resources">Links</span>
+                        </div>
+                        <div class="section-content">
+                            <div class="resources-grid">
+                                <a href="https://github.com/yuaotian/go-cursor-help" target="_blank" class="resource-card">
+                                    <i class="fab fa-github"></i>
+                                    <h3>Source Code</h3>
+                                    <p>View the complete source code, contribute, or report issues on GitHub.</p>
+                                </a>
+                                
+                                <a href="/" class="resource-card">
+                                    <i class="fas fa-play-circle"></i>
+                                    <h3>Web Interface</h3>
+                                    <p>Use the interactive web interface to reset your Cursor trial configuration.</p>
+                                </a>
+                                
+                                <a href="https://cursor.sh/" target="_blank" class="resource-card">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <h3>Cursor Official</h3>
+                                    <p>Visit the official Cursor website to learn more about the AI-powered code editor.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; 2024 Cursor Helper - Educational Tool</p>
+                        <p>For study and educational purposes only. Use responsibly.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="/" class="footer-link">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <a href="/help" class="footer-link">
+                            <i class="fas fa-question-circle"></i>
+                            Help
+                        </a>
+                        <a href="https://github.com/yuaotian/go-cursor-help" target="_blank" class="footer-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/help.js"></script>
+</body>
+</html>
